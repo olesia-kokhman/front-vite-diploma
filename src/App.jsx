@@ -1,38 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import Dashboard from './pages/Dashboard.jsx';
+import Accounts from './pages/Accounts.jsx';
+import Budget from './pages/Budget.jsx';
+import Transactions from './pages/Transactions.jsx';
+import Analytics from './pages/Analytics.jsx';
+import Navbar from './components/ui/general/Navbar/Navbar.jsx';
+
+import './index.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-        <h1 className="text-3xl font-bold underline">
-            Hello world from TailWind!
-        </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <Navbar />
+            <div className="routes px-4 py-2">
+                <Routes>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/accounts" element={<Accounts />} />
+                    <Route path="/budget" element={<Budget />} />
+                    <Route path="/transactions" element={<Transactions />} />
+                    <Route path="/analytics" element={<Analytics />} />
+                    <Route path="/" element={<Dashboard />} />
+                </Routes>
+            </div>
+        </>
+    );
 }
 
-export default App
+export default App;
+

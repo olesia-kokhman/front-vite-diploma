@@ -1,0 +1,109 @@
+/* Основні стилі для навігаційної панелі */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Розподілити елементи на панелі */
+    align-items: center; /* Вирівнювання по вертикалі */
+    padding: 10px 20px;
+    background-color: #f5f5f5; /* Фон для навігаційної панелі */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь для кращого вигляду */
+    font-family: Arial, sans-serif; /* Встановлюємо шрифт для хедера */
+}
+
+/* Стилі для логотипу */
+.logo-section {
+    display: flex;
+    align-items: center; /* Вирівнювання елементів в середині */
+}
+
+.logo-section img {
+    width: 40px; /* Розмір логотипу */
+    height: 40px;
+    margin-right: 10px; /* Відстань між логотипом і текстом */
+}
+
+.logo-section a {
+    text-decoration: none;
+    color: #333; /* Колір тексту */
+    font-size: 1.6rem; /* Розмір шрифту для логотипу */
+    font-weight: bold; /* Жирний шрифт */
+}
+
+/* Стилі для лінків */
+.nav-links {
+    display: flex;
+    gap: 30px; /* Відстань між лінками */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Колір тексту */
+    font-weight: bold;
+    padding: 8px 15px; /* Відступи для лінків */
+    border-radius: 5px; /* Закруглені кути */
+    font-size: 1.1rem; /* Розмір шрифту для лінків */
+}
+
+.nav-links a:hover {
+    background-color: #e0e0e0; /* Фон при наведенні */
+    border-radius: 5px; /* Закруглені кути при наведенні */
+}
+
+/* Стилі для користувача */
+.user-section {
+    display: flex;
+    align-items: center; /* Вирівнюємо по вертикалі */
+    position: relative;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px; /* Відстань між фото користувача і іменем */
+}
+
+.user-info img {
+    width: 35px; /* Розмір фото користувача */
+    height: 35px;
+    border-radius: 50%; /* Кругла форма для фото */
+    margin-right: 10px; /* Відстань між фото і іменем */
+}
+
+.user-info a {
+    text-decoration: none;
+    color: #333; /* Колір тексту */
+    font-weight: bold; /* Жирний шрифт */
+    font-size: 1.1rem; /* Розмір шрифту для імені користувача */
+}
+
+/* Стилі для випадаючого меню */
+.dropdown-menu {
+    position: absolute;
+    top: 45px; /* Відстань від фото користувача */
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+    display: none; /* За замовчуванням приховано */
+}
+
+.user-info:hover + .dropdown-menu {
+    display: block; /* Показати меню при наведенні на фото користувача */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+
